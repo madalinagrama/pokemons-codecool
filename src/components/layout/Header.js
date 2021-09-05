@@ -9,31 +9,14 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
             <Container>
-                <Navbar.Brand href="/">
-                    <img
-                        src={logo}
-                        width="300px"
-                        height="270px"
-                        className="d-inline-block align-top"
-                        alt="logo"
-                    />
-                </Navbar.Brand>
+                <Navbar.Brand href="/">Reactomon</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <h3><Nav.Link href="/pokemons">Pokemon's</Nav.Link></h3>
-                        <h3><Nav.Link href="/types">Types</Nav.Link></h3>
+                        <Nav.Link href="/pokemons">Pokemon's</Nav.Link>
+                        <Nav.Link href="/types">Types</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <Navbar.Brand>
-                    <img
-                        src={logo1}
-                        width="320px"
-                        height="300px"
-                        className="d-inline-block align-top"
-                        alt="picture"
-                    />
-                </Navbar.Brand>
             </Container>
         </Navbar>
     );

@@ -1,20 +1,13 @@
 import React from 'react';
+import CardComponent from './CardComponent';
 
-import './PokemonList.css';
-import PokemonDetail from "../card/PokemonDetail";
-
-const PokemonList = (props) => {
-    return (<ul className="pokemon-list">
-            {props.items.map((pokemon) => (
-                <PokemonDetail
-                key={pokemon.id}
-                id={pokemon.id}
-                name={pokemon.name}
-                url={pokemon.url}
-                />
-            ))}
-        </ul>
-    )
+const PokemonList = ({ pokemonData }) => {
+    console.log(pokemonData)
+    return pokemonData.map((pokemon) => (
+        <CardComponent key={pokemon.url} pokemon={pokemon}/>
+    ))
 }
+
+
 
 export default PokemonList;
