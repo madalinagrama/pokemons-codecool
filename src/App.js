@@ -10,6 +10,7 @@ import {PokemonProvider} from './PokemonContext';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import TypeList from "./components/lists/TypeList";
 
 function App() {
     const [pokemonData, setPokemonData] = useState([]);
@@ -58,6 +59,9 @@ function App() {
                 <Route path="/pokemons" render={props => (
                     <PokemonList pokemonData={pokemonData}/>
                 )}/>
+                <Route path="/types" render={props => (
+                    <TypeList types={types} />
+                )} />
             </div>
         </Router>
     </PokemonProvider>
