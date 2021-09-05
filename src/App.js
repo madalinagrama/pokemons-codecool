@@ -1,13 +1,14 @@
 import React from "react";
 
-import './App.css';
-import Header from "./components/Header/Header";
+import Header from "./components/header/Header";
+import PokemonList from "./components/lists/PokemonList";
 
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header/>
+        <PokemonList/>
     </div>
   );
 }
