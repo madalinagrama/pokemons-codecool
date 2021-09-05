@@ -7,7 +7,7 @@ import {getAllPokemon, getPokemon, loadingTypes} from "./components/services/pok
 import ReactPlayer from 'react-player';
 import {Container} from 'react-bootstrap';
 import {PokemonProvider} from './PokemonContext';
-
+import PokemonInfo from "./components/cardDetails/PokemonInfo";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TypeList from "./components/lists/TypeList";
@@ -62,6 +62,11 @@ function App() {
                 <Route path="/types" render={props => (
                     <TypeList types={types} />
                 )} />
+                <Route
+                    path="/pokemon/:pokemonId/" render={props => (
+                    <PokemonInfo pokemonData={pokemonData} />
+                )}
+                />
             </div>
         </Router>
     </PokemonProvider>

@@ -33,8 +33,7 @@ function CardComponent({pokemon}) {
     let cardClass = `card card--${pokemon.types[0].type.name}`
 
     return (
-        <div>
-            <Container>
+
                 <figure className={cardClass}>
                     <a href={`pokemon/${pokemon.id}/`}><Button className="card--normal">Info</Button></a>{' '}
                     <div className="card__image-container">
@@ -76,8 +75,7 @@ function CardComponent({pokemon}) {
                         </div>
                     </figcaption>
                 </figure>
-            </Container>
-        </div>
+
     )
 }
 
