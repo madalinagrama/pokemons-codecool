@@ -51,15 +51,15 @@ const P = styled.p`
 
 const PokemonInfo = ({ pokemonData }) => {
     let { pokemonId } = useParams();
-    const pokemon = pokemonData.find((pokemon) => { return pokemon.id === pokemonId });
+    const pokemon = pokemonData.find((pokemon) => { return pokemon.id === parseInt(pokemonId) });
     const [isLoading, setIsLoading] = useState(true)
     const [pokemonz, setPokemonz] = useContext(PokemonContext);
 
-    const catchThisPokemon = e => {
-        e.preventDefault();
-        setPokemonz(prevPokemonz => [...prevPokemonz, pokemon]);
-        console.log(pokemonz)
-    }
+    // const catchThisPokemon = e => {
+    //     e.preventDefault();
+    //     setPokemonz(prevPokemonz => [...prevPokemonz, pokemon]);
+    //     console.log(pokemonz)
+    // }
 
     useEffect(() => {
         function waitForElement() {
