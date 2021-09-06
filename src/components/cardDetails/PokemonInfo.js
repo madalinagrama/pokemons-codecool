@@ -8,9 +8,7 @@ const Card = styled.div`
 	position: absolute;
 	width: 700px;
 	height: 450px;
-	padding: 25px;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 25px;
 	left: 50%;
 	top: 115px;
 	margin-left: -220px;
@@ -24,13 +22,11 @@ const Image = styled.img`
 	float: left;
 	border-radius: 5px;
 	margin-right: 10px;
-	-webkit-filter: sepia(1);
-	-moz-filter: sepia(1);
 	filter: sepia(1);
 `
 
 const H2 = styled.h2`
-	font-family: courier;
+	font-family: 'Courier', sans-serif;
 	color: #333;
 	margin: 0 auto;
 	padding: 0;
@@ -39,7 +35,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-	font-family: courier;
+	font-family: 'Courier', sans-serif;
 	color: #333;
 	margin: 0 auto;
 	padding: 0;
@@ -48,14 +44,14 @@ const H3 = styled.h3`
 `
 
 const P = styled.p`
-	font-family: courier;
+	font-family: 'Courier', sans-serif;
 	color: #555;
 	font-size: 13px;
 `
 
 const PokemonInfo = ({ pokemonData }) => {
     let { pokemonId } = useParams();
-    const pokemon = pokemonData.find((pokemon) => { return pokemon.id == pokemonId });
+    const pokemon = pokemonData.find((pokemon) => { return pokemon.id === pokemonId });
     const [isLoading, setIsLoading] = useState(true)
     const [pokemonz, setPokemonz] = useContext(PokemonContext);
 
